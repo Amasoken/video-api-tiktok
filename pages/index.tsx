@@ -44,7 +44,6 @@ export default function () {
                                 Video page url:
                             </label>
                             <input
-                                // className='w-full'
                                 className='block w-full rounded-md border-gray-300 border px-4 focus:border-gray-500 focus:ring-gray-500'
                                 type='text'
                                 id='url'
