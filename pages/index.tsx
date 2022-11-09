@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { FormEvent, useState } from 'react';
 
-export default function () {
+export default function Home() {
     const [videoUrl, setVideoUrl] = useState<string>('');
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
