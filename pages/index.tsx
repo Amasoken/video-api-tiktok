@@ -70,6 +70,7 @@ export default function Home() {
                     <textarea
                         className='block w-full rounded-md border-gray-300 border px-4 focus:border-gray-500 focus:ring-gray-500 text-sm'
                         rows={5}
+                        readOnly
                         value={isLoading ? 'Loading...' : videoUrl || ''}
                     />
                 </div>
