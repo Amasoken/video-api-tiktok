@@ -36,7 +36,7 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <main className='bg-gray-200 h-screen w-screen p-8 flex flex-col items-center justify-center text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl'>
+            <main className='bg-gray-200 h-screen w-screen p-8 flex flex-col items-center justify-center text-sm md:text-base lg:text-lg lg:px-12 xl:text-xl 2xl:text-2xl 2xl:px-16'>
                 <form action='/api/get-video-url' method='get' className='w-full' onSubmit={onSubmit}>
                     <div className='w-full flex flex-wrap sm:flex-nowrap items-center'>
                         <div className='w-full'>
@@ -65,10 +65,10 @@ export default function Home() {
                     </div>
                 </form>
 
-                <div className='w-full mt-5'>
+                <div className='w-full mt-5 h-1/2'>
                     <label className='block font-medium text-gray-700'>Direct url:</label>
                     <textarea
-                        className='block w-full rounded-md border-gray-300 border px-4 focus:border-gray-500 focus:ring-gray-500 text-sm'
+                        className='block w-full h-full rounded-md border-gray-300 border px-4 focus:border-gray-500 focus:ring-gray-500 text-sm'
                         rows={5}
                         readOnly
                         value={isLoading ? 'Loading...' : videoUrl || ''}
