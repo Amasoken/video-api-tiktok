@@ -66,8 +66,10 @@ var generateCSP = function () {
     addPolicy(Directives.FrameAncestors, Policies.None);
     addPolicy(Directives.BaseUri, Policies.None);
     addPolicy(Directives.FormAction, Policies.Self);
+    addPolicy(Directives.StyleSrcElem, Policies.Self);
     addPolicy(Directives.StyleSrc, Policies.UnsafeInline);
     addPolicy(Directives.ImgSrc, Policies.Self);
+    addPolicy(Directives.ConnectSrc, Policies.Self);
     return Object.entries(policy)
         .map(function (_a) {
         var key = _a[0], value = _a[1];
