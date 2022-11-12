@@ -62,7 +62,8 @@ const generateCSP = () => {
     addPolicy(Directives.FrameAncestors, Policies.None);
     addPolicy(Directives.BaseUri, Policies.None);
     addPolicy(Directives.FormAction, Policies.Self);
-    addPolicy(Directives.StyleSrcElem, Policies.UnsafeInline);
+    addPolicy(Directives.StyleSrcElem, Policies.Self);
+    addPolicy(Directives.StyleSrcElem, Policies.UnsafeInline, { devOnly: true });
     addPolicy(Directives.StyleSrc, Policies.UnsafeInline);
     addPolicy(Directives.ImgSrc, Policies.Self);
     addPolicy(Directives.ConnectSrc, Policies.Self);
