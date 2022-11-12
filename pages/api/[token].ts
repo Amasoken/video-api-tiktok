@@ -15,7 +15,10 @@ type ErrorData = {
 type Data = SuccessData | ErrorData;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-    const { url } = req.query;
+    const { url, token } = req.query;
+    const secret = process.env.SECRET;
+
+    if (!secret || !token || secret !== token) return res.redirect('/404').end();
 
     if (typeof url !== 'string' || !validateUrl(url)) {
         return res.status(400).json({ message: 'Expected url to be a valid tiktok video url string', success: false });
