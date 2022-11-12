@@ -6,8 +6,8 @@ import Image, { StaticImageData } from 'next/image';
 const bowlbyOneSc = Bowlby_One_SC({ weight: '400', subsets: ['latin'] });
 
 export enum ImagePosition {
-    Right = 'right',
-    Left = 'left',
+    Right = 'right-0',
+    Left = 'left-0',
 }
 
 interface Props {
@@ -37,7 +37,7 @@ export default function CustomError({ code, message, messageSize, img }: Props) 
                 <p className={`${styles[`fontSize${messageSize}`]} drop-shadow-[3px_3px_0px_#9F0089]`}>{message}</p>
             </div>
             <Image
-                className={`fixed ${position}-0 bottom-0 max-w-[80%] max-h-[50%] h-auto w-auto`}
+                className={`fixed ${position} bottom-0 max-w-[80%] max-h-[50%] h-auto w-auto`}
                 src={src}
                 alt='Picture of the author'
                 priority
