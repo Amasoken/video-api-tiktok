@@ -1,0 +1,14 @@
+.fontSize25 {
+    font-size: min(25.5vw, 25.5vh);
+    line-height: min(25.5vw, 25.5vh);
+}
+
+.fontSize10 {
+    font-size: min(10vw, 10vh);
+    line-height: min(10vw, 10vh);
+}
+
+.fontSize5 {
+    font-size: min(5vw, 5vh);
+    line-height: min(5vw, 5vh);
+}
