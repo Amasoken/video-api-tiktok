@@ -1,7 +1,8 @@
-export default function Custom404() {
-    return (
-        <div className='flex items-center justify-center h-screen bg-cyan-200 text-lg'>
-            <h1>500 - Server-side error occurred</h1>
-        </div>
-    );
+import errorImage from '../public/500.png';
+import CustomError, { ImagePosition } from './../components/CustomError/index';
+
+export default function Custom500() {
+    const img = { src: errorImage, position: ImagePosition.Left };
+
+    return <CustomError code={500} message='Internal Server Error' messageSize={5} img={img} />;
 }
