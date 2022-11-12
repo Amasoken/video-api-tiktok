@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "transpile-csp": "tsc ./utils/generate-csp.ts"
+    "transpile-csp": "tsc ./utils/generateCsp.ts"
   },
   "dependencies": {
     "@types/node": "18.11.9",

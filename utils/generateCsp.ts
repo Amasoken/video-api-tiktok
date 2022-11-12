@@ -66,6 +66,7 @@ const generateCSP = () => {
     addPolicy(Directives.StyleSrc, Policies.UnsafeInline);
     addPolicy(Directives.ImgSrc, Policies.Self);
     addPolicy(Directives.ConnectSrc, Policies.Self);
+    addPolicy(Directives.FontSrc, Policies.Self);
 
     return Object.entries(policy)
         .map(([key, value]) => `${key} ${value.join(' ')}`)

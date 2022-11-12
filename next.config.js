@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-const generateCSP = require('./utils/generate-csp.js').default;
-const generatePermissionsPolicy = require('./utils/generate-permissions-policy.js').default;
+const generateCSP = require('./utils/generateCsp.js').default;
+const generatePermissionsPolicy = require('./utils/generatePermissionsPolicy.js').default;
 
 const securityHeaders = [
     {
