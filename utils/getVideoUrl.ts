@@ -9,7 +9,8 @@ interface Data {
 export default function getVideoUrl(url: string): Promise<Data> {
     return fetch(url, { method: 'GET', headers: { 'User-Agent': USER_AGENT, 'Content-Type': 'application/json' } })
         .then((res) => {
-            if (res.status === 404 || res.url === 'https://www.tiktok.com/') throw new Error('Video not found');
+            if (res.status === 404) throw new Error('Video is unavailable');
+            if (res.url === 'https://www.tiktok.com/') throw new Error('Video not found');
             if (res.status === 403) throw new Error("Couldn't fetch the video page");
 
             return res;
