@@ -67,6 +67,7 @@ const generateCSP = () => {
     addPolicy(Directives.StyleSrc, Policies.UnsafeInline);
     addPolicy(Directives.ImgSrc, Policies.Self);
     addPolicy(Directives.ConnectSrc, Policies.Self);
+    addPolicy(Directives.ConnectSrc, 'vitals.vercel-insights.com');
     addPolicy(Directives.FontSrc, Policies.Self);
 
     return Object.entries(policy)
