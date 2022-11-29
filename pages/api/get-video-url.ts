@@ -24,8 +24,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     return getVideoUrl(url).then(({ videoUrl, error }) => {
         if (error) {
             let status = 400;
-            if (['Video is unavailable', 'Video not found'].includes(error.message)) {
-                status = 404;
+            if (error.message.includes('Resource was not loaded. Status: ')) {
+                status = Number(error.message.split('Status: ')[1]);
             }
 
             return res.status(status).json({ message: error.message, success: false });
